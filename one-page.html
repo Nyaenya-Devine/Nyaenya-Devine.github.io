@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Devine Nyaenya Ngorwe — One-Page Resume</title>
+<style>
+  :root{
+    --ink:#1c2330; --muted:#5a6572; --line:#d9dee6; --accent:#0b6e6a; --accent2:#0a4b48; --soft:#f4f7f7;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:#e9edf1; line-height:1.4; font-size:13px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:800px;margin:22px auto;background:#fff;padding:34px 40px;box-shadow:0 12px 44px rgba(20,30,40,.13);}
+  header{border-bottom:3px solid var(--accent);padding-bottom:12px;margin-bottom:14px;}
+  h1{font-size:22px;margin:0 0 2px;letter-spacing:.3px;text-transform:uppercase;}
+  .role{color:var(--accent);font-weight:700;font-size:13px;margin:0 0 5px;}
+  .contact{color:var(--muted);font-size:11px;margin:0;line-height:1.5;}
+  .contact a{color:var(--accent2);text-decoration:none;font-weight:600;}
+  section{margin-top:14px;}
+  h2{
+    font-size:11px;text-transform:uppercase;letter-spacing:1.4px;color:var(--accent2);
+    border-bottom:2px solid var(--line);padding-bottom:4px;margin:0 0 8px;
+  }
+  h3{font-size:13px;margin:0 0 2px;}
+  h4{font-size:12.5px;margin:0 0 1px;}
+  .meta{font-size:11px;color:var(--muted);margin:0 0 5px;}
+  .meta a{color:var(--accent2);text-decoration:none;font-weight:600;}
+  p{margin:0 0 6px;}
+  ul{margin:1px 0 0;padding-left:16px;}
+  li{margin-bottom:3px;}
+  .summary{font-size:12.5px;color:#2a333f;}
+  .summary strong{color:var(--ink);}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:10px 0 2px;}
+  .stat{background:var(--soft);border:1px solid var(--line);border-radius:7px;padding:7px 6px;text-align:center;}
+  .stat b{display:block;font-size:15px;color:var(--accent2);line-height:1.1;}
+  .stat span{font-size:9.5px;color:var(--muted);letter-spacing:.2px;}
+  .tag{display:inline-block;background:var(--soft);color:var(--accent2);border-radius:16px;
+       padding:2px 9px;font-size:10.5px;margin:0 4px 4px 0;border:1px solid var(--line);}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .cert{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:3px 0;font-size:12px;}
+  .cert span{color:var(--muted);font-size:11px;white-space:nowrap;}
+  .job{margin-bottom:10px;padding-bottom:9px;border-bottom:1px dashed var(--line);}
+  .job:last-child{border-bottom:none;}
+  .backlink{text-align:center;margin-top:14px;font-size:11px;}
+  .backlink a{color:var(--accent2);text-decoration:none;font-weight:600;}
+  .print-btn{
+    position:fixed;top:16px;right:16px;background:var(--accent2);color:#fff;border:none;
+    padding:9px 16px;border-radius:24px;font-size:13px;font-weight:600;cursor:pointer;
+    box-shadow:0 4px 14px rgba(10,75,72,.3);font-family:inherit;
+  }
+  .print-btn:hover{background:var(--accent);}
+  @media print{
+    body{background:#fff;font-size:11px;}
+    .page{box-shadow:none;margin:0;max-width:100%;padding:10px 16px;}
+    a{color:var(--ink);}
+    .backlink{display:none;}
+    .print-btn{display:none;}
+  }
+  @media(max-width:600px){
+    .page{padding:18px 14px;margin:0;}
+    .stats{grid-template-columns:repeat(2,1fr);}
+    .grid2{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <button class="print-btn" onclick="window.print()">⬇ Download PDF</button>
+
+  <header>
+    <h1>Devine Nyaenya Ngorwe</h1>
+    <p class="role">Security-focused professional · IT &amp; Client Support · 10+ yrs operations</p>
+    <p class="contact">
+      Nairobi, Kenya · +254 708 000 446 · <a href="mailto:devinenyaenya@gmail.com">devinenyaenya@gmail.com</a><br/>
+      <a href="https://github.com/Nyaenya-Devine">github.com/Nyaenya-Devine</a> · <a href="https://www.linkedin.com/in/devine-n-b16776173">linkedin.com/in/devine-n-b16776173</a>
+    </p>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">
+      Pivoting into <strong>cybersecurity / IT support</strong> on top of <strong>10+ years</strong> of audit-minded accounting,
+      cyber-café and computer/internet support, and client-facing business roles — the discipline security work depends on
+      (<strong>accuracy, compliance, trust</strong>). Now paired with hands-on security projects I built and <strong>red-teamed
+      myself</strong> (6/6 simulated attacks detected). Seeking a role in <strong>security operations, application security,
+      IT support, or incident response</strong>.
+    </p>
+    <div class="stats">
+      <div class="stat"><b>6/6</b><span>attacks detected</span></div>
+      <div class="stat"><b>28</b><span>passing tests</span></div>
+      <div class="stat"><b>10+</b><span>yrs experience</span></div>
+      <div class="stat"><b>15</b><span>security issues fixed</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Security Projects</h2>
+
+    <h3>Android Reset Lab — Security Simulation</h3>
+    <p class="meta">Python · pytest · CI · <a href="https://github.com/Nyaenya-Devine/android-reset-lab">github.com/Nyaenya-Devine/android-reset-lab</a></p>
+    <ul>
+      <li>Built an enterprise MDM device-reset simulation with <strong>dual-control approval, RBAC default-deny, and a hash-chained tamper-evident audit log</strong> — no single account can wipe a device alone.</li>
+      <li>Red-teamed it (brute force, replay, privilege escalation, after-hours abuse, unknown-device spoofing, unapproved execute) → <strong>6/6 detected</strong>.</li>
+      <li>Hardened it: <strong>15 fixes</strong> (enumeration, timing attack, XSS, actor-logging), false positives <strong>14→9</strong>, <strong>28 tests</strong>, mapped to <strong>MITRE ATT&amp;CK / NIST 800-53</strong>.</li>
+    </ul>
+
+    <h3>SOC Home Lab — Network Security &amp; Monitoring</h3>
+    <p class="meta">Kali Linux · Nmap · tcpdump · VirtualBox</p>
+    <ul>
+      <li>Isolated VirtualBox lab; Nmap reconnaissance, tcpdump TCP/HTTP capture, baselining, suspicious-traffic investigation.</li>
+    </ul>
+
+    <h3>Android Device Management Tool — Web Application</h3>
+    <p class="meta">TypeScript · Next.js · <a href="https://github.com/Nyaenya-Devine/android-device-management-tool">github.com/Nyaenya-Devine/android-device-management-tool</a></p>
+    <ul>
+      <li>Admin console pairing with the lab; API routes, database integration, authentication concepts, security-minded dev.</li>
+    </ul>
+
+    <h3>EndoPima Kenya — Health Technology Prototype</h3>
+    <p class="meta">HTML/CSS · <a href="https://endopima-kenya.surge.sh">endopima-kenya.surge.sh</a></p>
+    <ul>
+      <li>Bilingual endometriosis early-recognition &amp; care-navigation prototype; privacy-conscious, local-first design.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="job"><h4>Social Media Manager</h4><p class="meta">Que Traders · 2024 – Feb 2026</p>
+      <ul><li>Content, customer communication, online engagement, product promotion; handled accounts/credentials carefully.</li></ul></div>
+
+    <div class="job"><h4>Car Broker</h4><p class="meta">Mulamwa Car Brokers, Eldoret · 2020 – 2024</p>
+      <ul><li>Connected buyers/sellers, client inquiries, negotiations, follow-ups; built trust through communication.</li></ul></div>
+
+    <div class="job"><h4>Business Operations &amp; Sales</h4><p class="meta">Beast Gaming Shop, Eldoret · 2018 – 2020</p>
+      <ul><li>Business ops, sales, customer service, administration, planning.</li></ul></div>
+
+    <div class="job"><h4>Manager, Computer &amp; Internet Support</h4><p class="meta">Nyakundi Cyber Café, Naivasha · 2015 – 2017</p>
+      <ul><li>Ran daily operations; <strong>customer computer and internet support</strong>, troubleshooting, device/connectivity help, records.</li></ul></div>
+
+    <div class="job"><h4>Accountant</h4><p class="meta">Karanja Gaming Store, Keroka · 2014 – 2015</p>
+      <ul><li>Recorded sales/expenses/cash with accuracy; maintained financial records (audit discipline).</li></ul></div>
+  </section>
+
+  <section class="grid2">
+    <div>
+      <h2>Skills</h2>
+      <p class="meta" style="margin-bottom:4px;">Security &amp; Networking</p>
+      <div><span class="tag">Ethical Hacking</span><span class="tag">Threat Modeling</span><span class="tag">OWASP</span><span class="tag">MITRE ATT&amp;CK</span><span class="tag">NIST 800-53</span><span class="tag">Detection</span><span class="tag">Recon</span><span class="tag">Packet Analysis</span><span class="tag">RBAC</span><span class="tag">Audit Logging</span></div>
+      <p class="meta" style="margin:8px 0 4px;">Tools</p>
+      <div><span class="tag">Kali Linux</span><span class="tag">Nmap</span><span class="tag">tcpdump</span><span class="tag">Wireshark</span><span class="tag">VirtualBox</span><span class="tag">Git/GitHub</span><span class="tag">VS Code</span><span class="tag">pytest</span><span class="tag">GitHub Actions</span></div>
+      <p class="meta" style="margin:8px 0 4px;">Programming &amp; Web</p>
+      <div><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">SQL</span><span class="tag">Next.js</span><span class="tag">HTML/CSS</span><span class="tag">REST APIs</span><span class="tag">Node.js</span></div>
+    </div>
+    <div>
+      <h2>Education &amp; Certs</h2>
+      <p><strong>Certificate in Petroleum Geoscience</strong><br/><span style="color:var(--muted);font-size:11px;">Eldoret National Polytechnic · 2019–2021</span></p>
+      <p><strong>KCSE</strong><br/><span style="color:var(--muted);font-size:11px;">St. Francis Nyatieko High School · 2010–2013</span></p>
+      <div class="cert"><strong>Introduction to Cybersecurity</strong><span>Cisco</span></div>
+      <div class="cert"><strong>Python Essentials 2</strong><span>Cisco / Python Institute</span></div>
+      <div class="cert"><strong>Python Programming for Beginners</strong><span>Mindluster</span></div>
+      <div class="cert"><strong>Data Entry</strong><span>Mindluster</span></div>
+      <div class="cert"><strong>Coding with AI</strong><span>Mindluster</span></div>
+      <div class="cert"><strong>Make AI for Beginners</strong><span>Mindluster</span></div>
+      <div class="cert"><strong>Copilot Studio AI Agents</strong><span>Mindluster</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Additional &amp; Languages</h2>
+    <p>Microsoft Word &amp; Excel · technical documentation · website design · AI-assisted development · data entry &amp; record-keeping · social media management · problem-solving &amp; teamwork</p>
+    <p><strong>Languages:</strong> English · Kiswahili · Ekegusii</p>
+  </section>
+
+  <p class="backlink"><a href="index.html">← View full-length resume</a></p>
+
+</div>
+</body>
+</html>
