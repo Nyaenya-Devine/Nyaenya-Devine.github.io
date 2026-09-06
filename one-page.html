@@ -3,182 +3,217 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Devine Nyaenya Ngorwe — One-Page Resume</title>
+<title>Devine Nyaenya Ngorwe — One-Page Resume · P3 Hardened</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1c2330; --muted:#5a6572; --line:#d9dee6; --accent:#0b6e6a; --accent2:#0a4b48; --soft:#f4f7f7;
+    --obsidian:#050507; --surface:#0E0E11; --line:#1F1F23; --line-light:#E8E6E1;
+    --paper:#FFFDFA; --paper-2:#F8F5F0; --ink-dark:#0A0A0B; --ink-med:#52525B; --ink-low:#71717A;
+    --ink-high-dark:#F5F3EF; --ink-med-dark:#A8A6A1; --amber:#FFB224; --amber-dim:#B87A0A; --violet:#8B5CF6;
   }
   *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
   body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    color:var(--ink); background:#e9edf1; line-height:1.4; font-size:13px;
-    -webkit-font-smoothing:antialiased;
+    margin:0; font-family:"Inter", sans-serif; background:var(--obsidian); color:var(--ink-dark);
+    line-height:1.45; font-size:12.5px; -webkit-font-smoothing:antialiased;
   }
-  .page{max-width:800px;margin:22px auto;background:#fff;padding:34px 40px;box-shadow:0 12px 44px rgba(20,30,40,.13);}
-  header{border-bottom:3px solid var(--accent);padding-bottom:12px;margin-bottom:14px;}
-  h1{font-size:22px;margin:0 0 2px;letter-spacing:.3px;text-transform:uppercase;}
-  .role{color:var(--accent);font-weight:700;font-size:13px;margin:0 0 5px;}
-  .contact{color:var(--muted);font-size:11px;margin:0;line-height:1.5;}
-  .contact a{color:var(--accent2);text-decoration:none;font-weight:600;}
-  section{margin-top:14px;}
+  body::before{
+    content:""; position:fixed; inset:0;
+    background:
+      radial-gradient(80% 80% at 15% 20%, rgba(255,178,36,0.12), transparent 50%),
+      radial-gradient(60% 60% at 85% 25%, rgba(139,92,246,0.10), transparent 50%);
+    filter:blur(40px); pointer-events:none; z-index:-1;
+  }
+  .page{
+    max-width:800px; margin:20px auto; background:var(--paper); border-radius:16px;
+    overflow:hidden; box-shadow:0 20px 60px -20px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.06);
+    position:relative;
+  }
+  .page::before{
+    content:""; position:absolute; top:0; left:0; right:0; height:1px;
+    background:linear-gradient(to right, transparent, rgba(255,178,36,0.5), rgba(139,92,246,0.3), transparent);
+  }
+  header{
+    background:var(--obsidian); color:var(--ink-high-dark); padding:28px 36px 20px; position:relative;
+  }
+  header::before{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(60% 60% at 20% 20%, rgba(255,178,36,0.10), transparent 50%);
+  }
+  .header-inner{position:relative;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px; font-family:"JetBrains Mono", monospace;
+    font-size:10px; text-transform:uppercase; letter-spacing:0.18em; color:var(--amber);
+  }
+  .eyebrow::before{content:""; width:4px; height:4px; border-radius:50%; background:var(--amber); box-shadow:0 0 8px rgba(255,178,36,0.8);}
+  h1{
+    font-family:"Instrument Serif", serif; font-size:26px; font-weight:400; letter-spacing:-0.02em;
+    line-height:0.95; margin:10px 0 4px;
+  }
+  h1 span{
+    background:linear-gradient(105deg, #FFFDFA 0%, #FFB224 70%, #8B5CF6 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .role{font-size:12px; font-weight:500; color:#FFC96B; margin:0 0 10px;}
+  .contact{font-family:"JetBrains Mono", monospace; font-size:10.5px; line-height:1.6; color:#A8A6A1;}
+  .contact a{color:#F5F3EF; text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.15);}
+  .contact a:hover{color:var(--amber); border-bottom-color:var(--amber);}
+  .content{padding:20px 36px 24px;}
+  .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:12px 0 4px;}
+  .stat{background:#F8F5F0; border:1px solid #E8E6E1; border-radius:10px; padding:8px 6px; text-align:center;}
+  .stat b{display:block; font-family:"Instrument Serif", serif; font-size:18px; font-weight:400; line-height:1; color:#0A0A0B;}
+  .stat b.accent{color:#B87A0A;} .stat b.violet{color:#8B5CF6;}
+  .stat span{font-family:"JetBrains Mono", monospace; font-size:9px; text-transform:uppercase; letter-spacing:0.06em; color:#71717A; display:block; margin-top:4px;}
   h2{
-    font-size:11px;text-transform:uppercase;letter-spacing:1.4px;color:var(--accent2);
-    border-bottom:2px solid var(--line);padding-bottom:4px;margin:0 0 8px;
+    font-family:"JetBrains Mono", monospace; font-size:10px; text-transform:uppercase; letter-spacing:0.16em;
+    color:#B87A0A; border-bottom:1px solid #E8E6E1; padding-bottom:5px; margin:18px 0 10px;
+    display:flex; align-items:center; gap:8px;
   }
-  h3{font-size:13px;margin:0 0 2px;}
-  h4{font-size:12.5px;margin:0 0 1px;}
-  .meta{font-size:11px;color:var(--muted);margin:0 0 5px;}
-  .meta a{color:var(--accent2);text-decoration:none;font-weight:600;}
-  p{margin:0 0 6px;}
-  ul{margin:1px 0 0;padding-left:16px;}
-  li{margin-bottom:3px;}
-  .summary{font-size:12.5px;color:#2a333f;}
-  .summary strong{color:var(--ink);}
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:10px 0 2px;}
-  .stat{background:var(--soft);border:1px solid var(--line);border-radius:7px;padding:7px 6px;text-align:center;}
-  .stat b{display:block;font-size:15px;color:var(--accent2);line-height:1.1;}
-  .stat span{font-size:9.5px;color:var(--muted);letter-spacing:.2px;}
-  .tag{display:inline-block;background:var(--soft);color:var(--accent2);border-radius:16px;
-       padding:2px 9px;font-size:10.5px;margin:0 4px 4px 0;border:1px solid var(--line);}
-  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-  .cert{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:3px 0;font-size:12px;}
-  .cert span{color:var(--muted);font-size:11px;white-space:nowrap;}
-  .job{margin-bottom:10px;padding-bottom:9px;border-bottom:1px dashed var(--line);}
+  h2::before{content:""; width:3px; height:3px; border-radius:50%; background:var(--amber);}
+  h2.violet{color:#8B5CF6;} h2.violet::before{background:var(--violet);}
+  h3{font-size:13px; font-weight:600; margin:0 0 2px; letter-spacing:-0.01em;}
+  h4{font-size:12px; font-weight:600; margin:0 0 1px;}
+  .meta{font-family:"JetBrains Mono", monospace; font-size:10px; color:#71717A; margin:0 0 6px;}
+  .meta a{color:#52525B; text-decoration:none; border-bottom:1px solid rgba(0,0,0,0.1);}
+  p{margin:0 0 6px; font-size:12px; line-height:1.5; color:#2a333f;}
+  ul{margin:2px 0 0; padding-left:16px;}
+  li{margin-bottom:3px; font-size:11.5px; line-height:1.45; color:#2a333f;}
+  li::marker{color:#B87A0A;}
+  .summary{
+    font-size:12px; line-height:1.5; background:#F8F5F0; border:1px solid #E8E6E1; border-radius:10px;
+    padding:10px 12px; color:#1f2937;
+  }
+  .tag{
+    display:inline-flex; background:#F8F5F0; border:1px solid #E8E6E1; border-radius:999px;
+    padding:2px 8px; font-family:"JetBrains Mono", monospace; font-size:9.5px; margin:0 4px 4px 0;
+  }
+  .tag.amber{background:rgba(255,178,36,0.10); border-color:rgba(255,178,36,0.20); color:#B87A0A;}
+  .tag.violet{background:rgba(139,92,246,0.08); border-color:rgba(139,92,246,0.15); color:#6D28D9;}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  .cert{display:flex; justify-content:space-between; border-bottom:1px solid rgba(0,0,0,0.06); padding:4px 0; font-size:11px;}
+  .cert strong{font-weight:500;} .cert span{font-family:"JetBrains Mono", monospace; font-size:10px; color:#71717A; background:#F8F5F0; border:1px solid #E8E6E1; border-radius:999px; padding:1px 6px;}
+  .job{margin-bottom:12px; padding-bottom:10px; border-bottom:1px dashed rgba(0,0,0,0.06);}
   .job:last-child{border-bottom:none;}
-  .backlink{text-align:center;margin-top:14px;font-size:11px;}
-  .backlink a{color:var(--accent2);text-decoration:none;font-weight:600;}
-  .print-btn{
-    position:fixed;top:16px;right:16px;background:var(--accent2);color:#fff;border:none;
-    padding:9px 16px;border-radius:24px;font-size:13px;font-weight:600;cursor:pointer;
-    box-shadow:0 4px 14px rgba(10,75,72,.3);font-family:inherit;
+  .bottom-cta{text-align:center; margin-top:16px; padding-top:12px; border-top:1px solid #E8E6E1;}
+  .bottom-cta a{
+    display:inline-flex; align-items:center; gap:4px; font-size:11px; font-weight:500;
+    text-decoration:none; border:1px solid #E8E6E1; border-radius:999px; padding:6px 12px; margin:0 3px;
+    color:#0A0A0B; transition:all 0.3s;
   }
-  .print-btn:hover{background:var(--accent);}
+  .bottom-cta a:hover{background:#0A0A0B; color:#FFFDFA;}
+  .bottom-cta a.primary{background:#0A0A0B; color:#FFFDFA;}
+  .print-btn{
+    position:fixed; top:16px; right:16px; background:#0A0A0B; color:#FFFDFA; border:none;
+    padding:8px 14px; border-radius:999px; font-size:12px; font-weight:600; cursor:pointer;
+    box-shadow:0 8px 20px -10px rgba(0,0,0,0.4); z-index:10;
+  }
   @media print{
-    body{background:#fff;font-size:11px;}
-    .page{box-shadow:none;margin:0;max-width:100%;padding:10px 16px;}
-    a{color:var(--ink);}
-    .backlink{display:none;}
-    .print-btn{display:none;}
+    body{background:#fff;} body::before{display:none;}
+    .page{box-shadow:none; margin:0; max-width:100%; border-radius:0;}
+    .print-btn{display:none;} .bottom-cta{display:none;}
   }
   @media(max-width:600px){
-    .page{padding:18px 14px;margin:0;}
-    .stats{grid-template-columns:repeat(2,1fr);}
-    .grid2{grid-template-columns:1fr;}
+    .page{margin:0; border-radius:0;} header{padding:20px 16px 14px;} .content{padding:16px 14px 18px;}
+    .stats{grid-template-columns:repeat(2,1fr);} .grid2{grid-template-columns:1fr;}
   }
 </style>
 </head>
 <body>
 <div class="page">
-  <button class="print-btn" onclick="window.print()">⬇ Download PDF</button>
+  <button class="print-btn" onclick="window.print()">⬇ PDF</button>
 
   <header>
-    <h1>Devine Nyaenya Ngorwe</h1>
-    <p class="role">Security-focused professional · IT &amp; Client Support · 10+ yrs operations</p>
-    <p class="contact">
-      Nairobi, Kenya · +254 708 000 446 · <a href="mailto:devinenyaenya@gmail.com">devinenyaenya@gmail.com</a><br/>
-      <a href="https://github.com/Nyaenya-Devine">github.com/Nyaenya-Devine</a> · <a href="https://www.linkedin.com/in/devine-n-b16776173">linkedin.com/in/devine-n-b16776173</a>
-    </p>
+    <div class="header-inner">
+      <div class="eyebrow">Nairobi, Kenya · Security Engineering · P3 Hardened · 52 Tests</div>
+      <h1><span>Devine Nyaenya Ngorwe</span></h1>
+      <p class="role">Security-focused professional · IT & Client Support · 10+ yrs ops · Open to SOC / AppSec</p>
+      <p class="contact">
+        +254 708 000 446 · <a href="mailto:devinenyaenya@gmail.com">devinenyaenya@gmail.com</a><br/>
+        <a href="https://github.com/Nyaenya-Devine">github.com/Nyaenya-Devine</a> · <a href="https://www.linkedin.com/in/devine-n-b16776173">linkedin.com/in/devine-n-b16776173</a> · <a href="https://devine-nyaenya-portfolio.vercel.app">portfolio.vercel.app (P3 redesign)</a>
+      </p>
+    </div>
   </header>
 
-  <section>
-    <h2>Summary</h2>
-    <p class="summary">
-      Pivoting into <strong>cybersecurity / IT support</strong> on top of <strong>10+ years</strong> of audit-minded accounting,
-      cyber-café and computer/internet support, and client-facing business roles — the discipline security work depends on
-      (<strong>accuracy, compliance, trust</strong>). Now paired with hands-on security projects I built and <strong>red-teamed
-      myself</strong> (6/6 simulated attacks detected). Seeking a role in <strong>security operations, application security,
-      IT support, or incident response</strong>.
-    </p>
-    <div class="stats">
-      <div class="stat"><b>6/6</b><span>attacks detected</span></div>
-      <div class="stat"><b>28</b><span>passing tests</span></div>
-      <div class="stat"><b>10+</b><span>yrs experience</span></div>
-      <div class="stat"><b>15</b><span>security issues fixed</span></div>
+  <div class="content">
+    <section>
+      <h2>Summary — P3 Hardened</h2>
+      <p class="summary">
+        Pivoting into <strong>cybersecurity / security engineering</strong> on top of <strong>10+ years</strong> audit-minded ops — accounting, cyber-café support, client-facing business. Now paired with hands-on security projects I built and <strong>red-teamed myself</strong>: <strong>52 tests, 6/6 attacks detected, P3 hardened with Argon2id, HMAC tamper-proof, TOTP MFA, SIEM shipping</strong>. Seeking <strong>security operations, AppSec, IT support, incident response</strong> — Nairobi / Remote.
+      </p>
+      <div class="stats">
+        <div class="stat"><b class="accent">6/6</b><span>attacks detected</span></div>
+        <div class="stat"><b class="accent">52</b><span>tests passing</span></div>
+        <div class="stat"><b class="violet">P3</b><span>hardened</span></div>
+        <div class="stat"><b>10+</b><span>yrs exp</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Security Projects — P3</h2>
+
+      <h3>Android Reset Lab — Security Simulation (P3)</h3>
+      <p class="meta">Python · 52 tests · HMAC · TOTP · SIEM · <a href="https://github.com/Nyaenya-Devine/android-reset-lab">github.com/Nyaenya-Devine/android-reset-lab</a> · <a href="https://github.com/Nyaenya-Devine/android-reset-lab/releases/tag/v3.0">v3.0</a></p>
+      <ul>
+        <li>Enterprise MDM reset sim with <strong>dual-control, RBAC default-deny, PBKDF2/Argon2id + TOTP MFA, hash-chained + HMAC tamper-proof log + SIEM shipping</strong> — no single account can wipe alone.</li>
+        <li>Red-teamed 6 attacks + ledger tamper + self-approval + MFA bypass → <strong>6/6 detected, 9 precise alerts, tamper line 2, self-approval blocked</strong>.</li>
+        <li>P0→P3: <strong>15 fixes</strong> (enumeration, timing, XSS, actor-logging), <strong>14→9</strong> false positives, <strong>52 tests</strong> json+sqlite, MITRE/NIST mapped, 14 honest limits.</li>
+      </ul>
+
+      <h3>Chokepoint — Access-Control & Tamper-Evident Audit Platform</h3>
+      <p class="meta">Next.js 16 · TS · 26 tests · <a href="https://github.com/Nyaenya-Devine/Nyaenya-Devine-chokepoint">chokepoint repo</a> · <a href="https://nyaenya-devine-chokepoint.vercel.app">Live demo</a></p>
+      <ul>
+        <li>Least-privilege access-control + tamper-evident audit for humans and AI agents (OWASP ASI03). Real RBAC, dual-control, HMAC ledger, anomaly detection, tests prove properties.</li>
+      </ul>
+
+      <h3>SOC Home Lab</h3>
+      <p class="meta">Kali · Nmap · tcpdump · VirtualBox</p>
+      <ul>
+        <li>Isolated lab; Nmap recon, tcpdump capture, baselining, suspicious-traffic investigation.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="job"><h4>Social Media Manager — Que Traders</h4><p class="meta">2024–Feb 2026</p>
+        <ul><li>Content, customer comms, online engagement; handled accounts/credentials carefully (security-relevant).</li></ul></div>
+
+      <div class="job"><h4>Car Broker — Mulamwa, Eldoret</h4><p class="meta">2020–2024</p>
+        <ul><li>Buyers/sellers, inquiries, negotiations; built trust through communication.</li></ul></div>
+
+      <div class="job"><h4>Manager, Computer & Internet Support — Nyakundi Cyber Café</h4><p class="meta">2015–2017 · IT support relevant</p>
+        <ul><li>Daily ops; <strong>computer/internet support, troubleshooting, device/connectivity help, records</strong>.</li></ul></div>
+
+      <div class="job"><h4>Accountant — Karanja Gaming Store</h4><p class="meta">2014–2015 · Audit discipline</p>
+        <ul><li>Sales/expenses/cash accuracy; maintained financial records (audit discipline).</li></ul></div>
+    </section>
+
+    <section class="grid2">
+      <div>
+        <h2>Skills — P3 Stack</h2>
+        <p class="meta" style="margin-bottom:4px;">Security & Engineering</p>
+        <div><span class="tag amber">Cybersecurity</span><span class="tag amber">Security Eng</span><span class="tag amber">AppSec</span><span class="tag violet">RBAC</span><span class="tag violet">Four-Eyes</span><span class="tag violet">HMAC</span><span class="tag violet">Argon2id</span><span class="tag violet">TOTP MFA</span><span class="tag">SIEM</span><span class="tag">Detection</span></div>
+        <p class="meta" style="margin:8px 0 4px;">Tools</p>
+        <div><span class="tag">Kali</span><span class="tag">Nmap</span><span class="tag">tcpdump</span><span class="tag">Wireshark</span><span class="tag">Git/GitHub</span><span class="tag">pytest 52</span><span class="tag">CodeQL</span><span class="tag">pip-audit</span></div>
+        <p class="meta" style="margin:8px 0 4px;">Programming & Web</p>
+        <div><span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">Next.js 16</span><span class="tag">Tailwind</span><span class="tag">SQLite WAL</span></div>
+      </div>
+      <div>
+        <h2>Education & Certs</h2>
+        <p><strong>Petroleum Geoscience</strong><br/><span style="color:#71717A; font-size:10px;">Eldoret National Polytechnic · 2019–2021</span></p>
+        <p><strong>KCSE</strong><br/><span style="color:#71717A; font-size:10px;">St. Francis Nyatieko · 2010–2013</span></p>
+        <div class="cert"><strong>Intro to Cybersecurity</strong><span>Cisco</span></div>
+        <div class="cert"><strong>Ethical Hacker</strong><span>Cisco</span></div>
+        <div class="cert"><strong>Python Essentials 1 & 2</strong><span>Cisco</span></div>
+        <div class="cert"><strong>Android Reset Lab P3 — 52 Tests</strong><span>Self-built</span></div>
+      </div>
+    </section>
+
+    <div class="bottom-cta">
+      <a href="index.html" class="primary">← Full resume</a>
+      <a href="https://devine-nyaenya-portfolio.vercel.app">🌐 Portfolio (P3 redesign)</a>
+      <a href="https://github.com/Nyaenya-Devine/android-reset-lab/releases/tag/v3.0">📊 v3.0</a>
     </div>
-  </section>
-
-  <section>
-    <h2>Security Projects</h2>
-
-    <h3>Android Reset Lab — Security Simulation</h3>
-    <p class="meta">Python · pytest · CI · <a href="https://github.com/Nyaenya-Devine/android-reset-lab">github.com/Nyaenya-Devine/android-reset-lab</a></p>
-    <ul>
-      <li>Built an enterprise MDM device-reset simulation with <strong>dual-control approval, RBAC default-deny, and a hash-chained tamper-evident audit log</strong> — no single account can wipe a device alone.</li>
-      <li>Red-teamed it (brute force, replay, privilege escalation, after-hours abuse, unknown-device spoofing, unapproved execute) → <strong>6/6 detected</strong>.</li>
-      <li>Hardened it: <strong>15 fixes</strong> (enumeration, timing attack, XSS, actor-logging), false positives <strong>14→9</strong>, <strong>28 tests</strong>, mapped to <strong>MITRE ATT&amp;CK / NIST 800-53</strong>.</li>
-    </ul>
-
-    <h3>SOC Home Lab — Network Security &amp; Monitoring</h3>
-    <p class="meta">Kali Linux · Nmap · tcpdump · VirtualBox</p>
-    <ul>
-      <li>Isolated VirtualBox lab; Nmap reconnaissance, tcpdump TCP/HTTP capture, baselining, suspicious-traffic investigation.</li>
-    </ul>
-
-    <h3>Android Device Management Tool — Web Application</h3>
-    <p class="meta">TypeScript · Next.js · <a href="https://github.com/Nyaenya-Devine/android-device-management-tool">github.com/Nyaenya-Devine/android-device-management-tool</a></p>
-    <ul>
-      <li>Admin console pairing with the lab; API routes, database integration, authentication concepts, security-minded dev.</li>
-    </ul>
-
-    <h3>EndoPima Kenya — Health Technology Prototype</h3>
-    <p class="meta">HTML/CSS · <a href="https://endopima-kenya.surge.sh">endopima-kenya.surge.sh</a></p>
-    <ul>
-      <li>Bilingual endometriosis early-recognition &amp; care-navigation prototype; privacy-conscious, local-first design.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Experience</h2>
-
-    <div class="job"><h4>Social Media Manager</h4><p class="meta">Que Traders · 2024 – Feb 2026</p>
-      <ul><li>Content, customer communication, online engagement, product promotion; handled accounts/credentials carefully.</li></ul></div>
-
-    <div class="job"><h4>Car Broker</h4><p class="meta">Mulamwa Car Brokers, Eldoret · 2020 – 2024</p>
-      <ul><li>Connected buyers/sellers, client inquiries, negotiations, follow-ups; built trust through communication.</li></ul></div>
-
-    <div class="job"><h4>Business Operations &amp; Sales</h4><p class="meta">Beast Gaming Shop, Eldoret · 2018 – 2020</p>
-      <ul><li>Business ops, sales, customer service, administration, planning.</li></ul></div>
-
-    <div class="job"><h4>Manager, Computer &amp; Internet Support</h4><p class="meta">Nyakundi Cyber Café, Naivasha · 2015 – 2017</p>
-      <ul><li>Ran daily operations; <strong>customer computer and internet support</strong>, troubleshooting, device/connectivity help, records.</li></ul></div>
-
-    <div class="job"><h4>Accountant</h4><p class="meta">Karanja Gaming Store, Keroka · 2014 – 2015</p>
-      <ul><li>Recorded sales/expenses/cash with accuracy; maintained financial records (audit discipline).</li></ul></div>
-  </section>
-
-  <section class="grid2">
-    <div>
-      <h2>Skills</h2>
-      <p class="meta" style="margin-bottom:4px;">Security &amp; Networking</p>
-      <div><span class="tag">Ethical Hacking</span><span class="tag">Threat Modeling</span><span class="tag">OWASP</span><span class="tag">MITRE ATT&amp;CK</span><span class="tag">NIST 800-53</span><span class="tag">Detection</span><span class="tag">Recon</span><span class="tag">Packet Analysis</span><span class="tag">RBAC</span><span class="tag">Audit Logging</span></div>
-      <p class="meta" style="margin:8px 0 4px;">Tools</p>
-      <div><span class="tag">Kali Linux</span><span class="tag">Nmap</span><span class="tag">tcpdump</span><span class="tag">Wireshark</span><span class="tag">VirtualBox</span><span class="tag">Git/GitHub</span><span class="tag">VS Code</span><span class="tag">pytest</span><span class="tag">GitHub Actions</span></div>
-      <p class="meta" style="margin:8px 0 4px;">Programming &amp; Web</p>
-      <div><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">SQL</span><span class="tag">Next.js</span><span class="tag">HTML/CSS</span><span class="tag">REST APIs</span><span class="tag">Node.js</span></div>
-    </div>
-    <div>
-      <h2>Education &amp; Certs</h2>
-      <p><strong>Certificate in Petroleum Geoscience</strong><br/><span style="color:var(--muted);font-size:11px;">Eldoret National Polytechnic · 2019–2021</span></p>
-      <p><strong>KCSE</strong><br/><span style="color:var(--muted);font-size:11px;">St. Francis Nyatieko High School · 2010–2013</span></p>
-      <div class="cert"><strong>Introduction to Cybersecurity</strong><span>Cisco</span></div>
-      <div class="cert"><strong>Python Essentials 2</strong><span>Cisco / Python Institute</span></div>
-      <div class="cert"><strong>Python Programming for Beginners</strong><span>Mindluster</span></div>
-      <div class="cert"><strong>Data Entry</strong><span>Mindluster</span></div>
-      <div class="cert"><strong>Coding with AI</strong><span>Mindluster</span></div>
-      <div class="cert"><strong>Make AI for Beginners</strong><span>Mindluster</span></div>
-      <div class="cert"><strong>Copilot Studio AI Agents</strong><span>Mindluster</span></div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Additional &amp; Languages</h2>
-    <p>Microsoft Word &amp; Excel · technical documentation · website design · AI-assisted development · data entry &amp; record-keeping · social media management · problem-solving &amp; teamwork</p>
-    <p><strong>Languages:</strong> English · Kiswahili · Ekegusii</p>
-  </section>
-
-  <p class="backlink"><a href="index.html">← View full-length resume</a></p>
-
+  </div>
 </div>
 </body>
 </html>
