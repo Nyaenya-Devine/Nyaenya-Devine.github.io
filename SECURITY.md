@@ -1,7 +1,7 @@
 # Security Policy — Nyaenya-Devine.github.io
 
 ## Overview
-GitHub Pages portfolio site for Devine Nyaenya — Security Engineer, 52 Tests P3 Hardened, P4 Cerberus 68 tests, OrbitDesk v2.0 Voice + Desktop.
+Static GitHub Pages résumé for Devine Nyaenya. The site has no authentication, user accounts, API, or server-side data store.
 
 ## Security Upgrades Emphasized (Military-Grade)
 
