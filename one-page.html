@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#050507">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-512.png">
-<title>Devine Nyaenya Ngorwe — One-Page Cybersecurity Resume</title>
+<title>Devine Nyaenya Ngorwe — Application Security Resume</title>
 <!-- System fonts keep the document self-contained and printable offline. -->
 <style>
   @font-face { font-family: 'Instrument Serif Fallback'; src: local('Georgia'), local('Times New Roman'); font-display: swap; }
@@ -126,102 +126,18 @@
   }
 </style>
 </head>
-<body>
-<div class="page">
-  <button class="print-btn" onclick="window.print()">⬇ PDF</button>
-
-  <header>
-    <div class="header-inner">
-      <div class="eyebrow">Nairobi, Kenya · Cybersecurity · Application Security · 75 Lab Tests</div>
-      <h1><span>Devine Nyaenya Ngorwe</span></h1>
-      <p class="role">Cybersecurity · Application Security · Authorized Security Testing</p>
-      <p class="contact">
-        <a href="mailto:devinenyaenya@gmail.com">devinenyaenya@gmail.com</a><br/>
-        <a href="https://github.com/Nyaenya-Devine">github.com/Nyaenya-Devine</a> · <a href="https://www.linkedin.com/in/devine-n-b16776173">linkedin.com/in/devine-n-b16776173</a> · <a href="https://devine-nyaenya-portfolio.vercel.app">portfolio.vercel.app</a>
-      </p>
-    </div>
-  </header>
-
+<body><div class="page">
+  <button class="print-btn" onclick="window.print()">Download PDF</button>
+  <header><div class="header-inner"><div class="eyebrow">Nairobi, Kenya · Authorized Security Testing</div><h1><span>Devine Nyaenya Ngorwe</span></h1><p class="role">Junior Penetration Testing · Application Security · Security Engineering</p><p class="contact"><a href="mailto:devinenyaenya@gmail.com">devinenyaenya@gmail.com</a> · <a href="https://github.com/Nyaenya-Devine">GitHub</a> · <a href="https://www.linkedin.com/in/devine-n-b16776173">LinkedIn</a> · <a href="https://devine-nyaenya-portfolio.vercel.app">Portfolio</a></p></div></header>
   <div class="content">
-    <section>
-      <h2>Summary</h2>
-      <p class="summary">
-        Building on more than ten years of audit-minded operations across accounting, technical support and client-facing work. My current projects focus on authorization controls, application security and evidence-driven attack simulation. Seeking <strong>junior penetration testing, application security, security engineering or detection</strong> work in Nairobi or remote.
-      </p>
-      <div class="stats">
-        <div class="stat"><b class="accent">75</b><span>reset-lab tests</span></div>
-        <div class="stat"><b class="accent">34</b><span>access-control tests</span></div>
-        <div class="stat"><b class="violet">6/6</b><span>attack cases detected</span></div>
-        <div class="stat"><b>10+</b><span>yrs operations experience</span></div>
-      </div>
+    <section><h2>Profile</h2><p class="summary">Security practitioner moving into junior penetration testing and application security. I build owned labs around authorization failures, destructive-action controls, attack detection and audit integrity. My approach is scope-first: reproduce the issue, preserve evidence, explain impact and provide a practical fix. Ten years in accounting, technical support and business operations add disciplined record-keeping and clear client communication.</p></section>
+    <section><h2>Security Projects</h2>
+      <div class="project"><h3>Chokepoint — Authorization Security</h3><p class="meta">TypeScript · Vitest · HMAC · <a href="https://github.com/Nyaenya-Devine/chokepoint">Code</a> · <a href="https://chokepoint-demo.vercel.app">Lab</a></p><ul><li>Tests self-approval, replay, privilege escalation and audit tampering across a dual-control workflow; 34 automated tests.</li></ul></div>
+      <div class="project"><h3>Android Reset Lab — Destructive-Action Safety</h3><p class="meta">Python · pytest · Argon2 · TOTP · <a href="https://github.com/Nyaenya-Devine/android-reset-lab">Code</a> · <a href="https://android-reset-lab.vercel.app">Lab</a></p><ul><li>Models identity, ownership, risk, approval and evidence checks; 75 tests plus six attack simulations.</li></ul></div>
+      <div class="project"><h3>Android Enterprise Fleet</h3><p class="meta">Next.js · TypeScript · <a href="https://github.com/Nyaenya-Devine/android-device-management-tool">Code</a> · <a href="https://android-device-management-tool.vercel.app">Console</a></p><ul><li>Examines enrollment, compliance, policy drift and destructive device commands as security decisions.</li></ul></div>
     </section>
-
-    <section>
-      <h2>Security Projects</h2>
-
-      <h3>Android Reset Lab — Security Simulation</h3>
-      <p class="meta">Python · 75 tests · HMAC · TOTP · detection rules · <a href="https://github.com/Nyaenya-Devine/android-reset-lab">github.com/Nyaenya-Devine/android-reset-lab</a> · <a href="https://android-reset-lab.vercel.app">v3.0</a></p>
-      <ul>
-        <li>Built a simulation of a high-impact reset workflow with default-deny RBAC, distinct-requester approval, step-up authentication and hash-chained audit evidence.</li>
-        <li>Wrote attack simulations for brute force, replay, privilege escalation, unknown devices, out-of-hours use and unapproved execution; all six cases are detected.</li>
-        <li>Maintains <strong>75 tests</strong> across authorization, negative paths, detection, workflow safety and sanitization decisions. No real reset commands are sent.</li>
-      </ul>
-
-      <h3>Chokepoint — Access-Control & Tamper-Evident Audit Platform</h3>
-      <p class="meta">Next.js 16 · TypeScript · 34 tests · <a href="https://github.com/Nyaenya-Devine/chokepoint">chokepoint repo</a> · <a href="https://chokepoint-demo.vercel.app">Live demo</a></p>
-      <ul>
-        <li>Least-privilege access-control + tamper-evident audit for humans and AI agents (OWASP ASI03). Real RBAC, dual-control, HMAC ledger, anomaly detection, tests prove properties.</li>
-      </ul>
-
-      <h3>SOC Home Lab</h3>
-      <p class="meta">Kali · Nmap · tcpdump · VirtualBox</p>
-      <ul>
-        <li>Isolated lab; Nmap recon, tcpdump capture, baselining, suspicious-traffic investigation.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Experience</h2>
-
-      <div class="job"><h4>Social Media Manager — Que Traders</h4><p class="meta">2024–Feb 2026</p>
-        <ul><li>Content, customer comms, online engagement; handled accounts/credentials carefully (security-relevant).</li></ul></div>
-
-      <div class="job"><h4>Car Broker — Mulamwa, Eldoret</h4><p class="meta">2020–2024</p>
-        <ul><li>Buyers/sellers, inquiries, negotiations; built trust through communication.</li></ul></div>
-
-      <div class="job"><h4>Manager, Computer & Internet Support — Nyakundi Cyber Café</h4><p class="meta">2015–2017 · Technical and client support</p>
-        <ul><li>Daily ops; <strong>computer/internet support, troubleshooting, device/connectivity help, records</strong>.</li></ul></div>
-
-      <div class="job"><h4>Accountant — Karanja Gaming Store</h4><p class="meta">2014–2015 · Audit discipline</p>
-        <ul><li>Sales/expenses/cash accuracy; maintained financial records (audit discipline).</li></ul></div>
-    </section>
-
-    <section class="grid2">
-      <div>
-        <h2>Skills</h2>
-        <p class="meta" style="margin-bottom:4px;">Security & Engineering</p>
-        <div><span class="tag amber">Cybersecurity</span><span class="tag amber">Security Eng</span><span class="tag amber">AppSec</span><span class="tag violet">RBAC</span><span class="tag violet">Four-Eyes</span><span class="tag violet">HMAC</span><span class="tag violet">Argon2id</span><span class="tag violet">TOTP MFA</span><span class="tag">SIEM</span><span class="tag">Detection</span></div>
-        <p class="meta" style="margin:8px 0 4px;">Tools</p>
-        <div><span class="tag">Kali</span><span class="tag">Nmap</span><span class="tag">tcpdump</span><span class="tag">Wireshark</span><span class="tag">Git/GitHub</span><span class="tag">pytest 75</span><span class="tag">CodeQL</span><span class="tag">pip-audit</span></div>
-        <p class="meta" style="margin:8px 0 4px;">Programming & Web</p>
-        <div><span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">Next.js 16</span><span class="tag">Tailwind</span><span class="tag">SQLite WAL</span></div>
-      </div>
-      <div>
-        <h2>Education & Certs</h2>
-        <p><strong>Petroleum Geoscience</strong><br/><span style="color:#71717A; font-size:10px;">Eldoret National Polytechnic · 2019–2021</span></p>
-        <p><strong>KCSE</strong><br/><span style="color:#71717A; font-size:10px;">St. Francis Nyatieko · 2010–2013</span></p>
-        <div class="cert"><strong>Intro to Cybersecurity</strong><span>Cisco</span></div>
-        <div class="cert"><strong>Ethical Hacker</strong><span>Cisco</span></div>
-        <div class="cert"><strong>Python Essentials 1 & 2</strong><span>Cisco</span></div>
-      </div>
-    </section>
-
-    <div class="bottom-cta">
-      <a href="index.html" class="primary">Full résumé</a>
-      <a href="https://devine-nyaenya-portfolio.vercel.app">Portfolio</a>
-      <a href="https://android-reset-lab.vercel.app">Reset lab</a>
-    </div>
-  </div>
-</div>
-</body>
-</html>
+    <section><h2>Capabilities</h2><p><strong>Web/API:</strong> HTTP, authentication, sessions, authorization, input handling, business logic, OWASP WSTG/Top 10 concepts.<br><strong>Network/host:</strong> TCP/IP, DNS, Linux, Windows, Nmap, Wireshark, tcpdump, Kali labs.<br><strong>Engineering:</strong> Python, TypeScript, REST APIs, pytest, Vitest, GitHub Actions, CodeQL, dependency review.<br><strong>Reporting:</strong> scope, reproduction, evidence, impact, root cause, remediation and retest.</p></section>
+    <section><h2>Background and Training</h2><p><strong>Business Operations and Client Support — 10+ years:</strong> accounting, brokerage, cyber-café support and business management in Kenya.</p><div class="certs"><div class="cert"><strong>Ethical Hacker</strong><span>Cisco Networking Academy</span></div><div class="cert"><strong>Junior Cybersecurity Analyst Career Path</strong><span>Cisco Networking Academy</span></div><div class="cert"><strong>Introduction to Cybersecurity</strong><span>Cisco Networking Academy</span></div></div></section>
+    <section><h2>Direction</h2><p>Seeking junior penetration testing, application-security testing, vulnerability assessment or security-engineering opportunities. Testing is limited to owned labs and explicitly authorized systems.</p></section>
+  </div><footer><span>Devine Nyaenya Ngorwe</span><span>Application Security · Authorized Testing</span></footer>
+</div></body></html>
