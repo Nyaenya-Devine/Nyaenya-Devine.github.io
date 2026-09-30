@@ -6,9 +6,8 @@ Static GitHub Pages résumé for Devine Nyaenya. The site has no authentication,
 ## Security Upgrades Emphasized (Military-Grade)
 
 ### 1. Security Headers (Military-Grade)
-- **Content-Security-Policy:** `default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests`
+- **Content-Security-Policy:** `default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests`
 - **X-Content-Type-Options:** `nosniff`
-- **X-Frame-Options:** `DENY` (via CSP frame-ancestors)
 - **Referrer-Policy:** `strict-origin-when-cross-origin`
 - **Permissions-Policy:** `camera=(), microphone=(), geolocation=()`
 
@@ -24,7 +23,7 @@ Static GitHub Pages résumé for Devine Nyaenya. The site has no authentication,
 
 ### 4. Threat Model
 - **XSS via query params:** No user input reflected without escaping
-- **Clickjacking:** CSP frame-ancestors none, X-Frame-Options DENY
+- **Clickjacking limitation:** GitHub Pages does not allow this repository to set `frame-ancestors` or `X-Frame-Options` response headers.
 - **Data leakage:** No personal data stored, no tracking
 
 ## Reporting
